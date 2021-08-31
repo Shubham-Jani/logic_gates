@@ -109,20 +109,28 @@ void entireTable()
 int main()
 {
     int way;
-    printf("Which way you want to get the table\n1) Entire table\n2) Inputs: \n");
-    scanf("%d", &way);
-    line();
-    switch (way)
+    char next;
+    do
     {
-    case 1:
-        entireTable();
-        break;
-    case 2:
-        withInput();
-        break;
+        printf("Which way you want to get the table\n1) Entire table\n2) Inputs: \n");
+        scanf("%d", &way);
+        line();
+        switch (way)
+        {
+        case 1:
+            entireTable();
+            break;
+        case 2:
+            withInput();
+            break;
 
-    default:
-        printf("Run and READ the code again dummy!\n");
-        break;
-    }
+        default:
+            printf("Run and READ the code again dummy!\n");
+            break;
+        }
+        printf("want to continue or exit the code ? (y/n):  ");
+        scanf(" %c", &next);
+    } while (next == 'y' || next == 'Y');
+    printf("Thanks for wasting your time in this dumb code\n");
+    line();
 }
