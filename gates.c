@@ -112,8 +112,17 @@ int main()
     printf("Which way you want to get the table\n1) Entire table\n2) Inputs: \n");
     scanf("%d", &way);
     line();
-    if (way == 1)
+    switch (way)
+    {
+    case 1:
         entireTable();
-    else
+        break;
+    case 2:
         withInput();
+        break;
+
+    default:
+        printf("Run and READ the code again dummy!\n");
+        break;
+    }
 }
